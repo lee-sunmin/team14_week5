@@ -1,5 +1,7 @@
 # team14_week5
 
+Coverage = 97.6
+
 1. Git Clone 후 이클립스에서 Import 클릭 후 'Existing Maven Projects'를 하여 프로젝트를 Import
 
 
