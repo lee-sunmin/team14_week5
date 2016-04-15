@@ -18,7 +18,6 @@ public class AppTest {
 	User u8 = new User(sv, 1000, 0);
 	User u9 = new User(sv, 1500, 0);
 
-	// gd START
 	User u10 = new User(gd, 1000, 1);
 	User u11 = new User(gd, 1000, 3);
 	User u12 = new User(gd, 1000, 5);
@@ -90,8 +89,6 @@ public class AppTest {
 		assertEquals(548.45, total, 1);
 	}
 
-	// gd START
-
 	@Test
 	public void getUserTotalChargeTestLine1gd() {
 		float total = u10.getUserTotalCharge();
@@ -151,12 +148,18 @@ public class AppTest {
 		float total = u19.getUserTotalCharge();
 		assertEquals(260.45, total, 1);
 	}
+	
 	@SuppressWarnings("static-access")
 	@Test
 	public void MainTestSilver(){
-		App appTest = new App();
+		App appTest;
+		appTest = new App();
 		String [] inputs = {"Gold","1500","5"};
 		appTest.main(inputs);
+		
+		String [] inputs_2 = {"Silver","1500","5"};
+		appTest.main(inputs_2);
+
 	}
 	
 }

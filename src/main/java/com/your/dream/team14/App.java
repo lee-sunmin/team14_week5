@@ -1,6 +1,5 @@
 package com.your.dream.team14;
 
-//import java.util.Scanner;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
@@ -8,9 +7,9 @@ import java.util.logging.Level;
 class App 
 {
 	private static User user;
-	//private static Scanner sc;
 	private static Logger log;
 	
+	// 생성자
 	public App(){
 	}
 
@@ -19,25 +18,21 @@ class App
 		int time;
 		int line;
 		
-		//sc = new Scanner(System.in);
 		log = Logger.getLogger("Logger");
 			
 			do{
 				showMessage(0);
 				plan = args[0];
-				//plan = sc.nextLine();
 			}while(!("Gold".equals(plan)||"Silver".equals(plan)));
 		
 			do{
 				showMessage(1);
 				time = Integer.parseInt(args[1]);
-				//time = sc.nextInt();
 			}while(!(time >= 0));
 		
 			do{
 				showMessage(2);
 				line = Integer.parseInt(args[2]);
-				//line = sc.nextInt();
 			}while(!(line > 0));		
 		user = new User(plan, time, line);
 		log.log(Level.INFO, "Total : " + user.getUserTotalCharge());
