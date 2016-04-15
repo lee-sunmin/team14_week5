@@ -154,8 +154,9 @@ public class AppTest {
 	@SuppressWarnings("static-access")
 	@Test
 	public void MainTestSilver(){
-		App appTest = new App(sv, 400, 4);
-		appTest.main(null);
+		App appTest = new App();
+		String [] inputs = {"Gold","1500","5"};
+		appTest.main(inputs);
 	}
 	
 }

@@ -1,6 +1,6 @@
 package com.your.dream.team14;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
@@ -8,35 +8,36 @@ import java.util.logging.Level;
 class App 
 {
 	private static User user;
-	private static Scanner sc;
+	//private static Scanner sc;
 	private static Logger log;
-	private static String plan;
-	private static int time;
-	private static int line;
 	
-	public App(String plan, int time, int line){
-		this.plan = plan;
-		this.time = time;
-		this.line = line;
+	public App(){
 	}
 
 	public static void main(String[] args) {
-		sc = new Scanner(System.in);
+		String plan;
+		int time;
+		int line;
+		
+		//sc = new Scanner(System.in);
 		log = Logger.getLogger("Logger");
 			
 			do{
 				showMessage(0);
-				plan = sc.nextLine();
+				plan = args[0];
+				//plan = sc.nextLine();
 			}while(!("Gold".equals(plan)||"Silver".equals(plan)));
 		
 			do{
 				showMessage(1);
-				time = sc.nextInt();
+				time = Integer.parseInt(args[1]);
+				//time = sc.nextInt();
 			}while(!(time >= 0));
 		
 			do{
 				showMessage(2);
-				line = sc.nextInt();
+				line = Integer.parseInt(args[2]);
+				//line = sc.nextInt();
 			}while(!(line > 0));		
 		user = new User(plan, time, line);
 		log.log(Level.INFO, "Total : " + user.getUserTotalCharge());
@@ -52,9 +53,6 @@ class App
 				break;
 			case 2:
 				log.log(Level.INFO, "line : ");
-				break;
-			case 3:
-				log.log(Level.INFO, "Input Error\nStart agian");
 				break;
 			default:
 				break;
