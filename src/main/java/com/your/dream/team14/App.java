@@ -10,16 +10,17 @@ class App
 	private static User user;
 	private static Scanner sc;
 	private static Logger log;
-
+	private static String plan;
+	private static int time;
+	private static int line;
 	
-	private App(){
-		
+	public App(String plan, int time, int line){
+		this.plan = plan;
+		this.time = time;
+		this.line = line;
 	}
-	
+
 	public static void main(String[] args) {
-		String plan;
-		int time;
-		int line;
 		sc = new Scanner(System.in);
 		log = Logger.getLogger("Logger");
 			
@@ -41,7 +42,7 @@ class App
 		log.log(Level.INFO, "Total : " + user.getUserTotalCharge());
 	}
 	
-	private static void showMessage(int message){
+	public static void showMessage(int message){
 		switch(message){
 			case 0:
 				log.log(Level.INFO, "Plan(Gold, Silver) : ");

@@ -4,31 +4,31 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-	private final String SILVER = "Silver";
-	private final String GOLD = "Gold";
+	private static final String sv = "Silver";
+	private static final String gd = "Gold";
 	
-	User u = new User(SILVER, 1000, 1);
-	User u1 = new User(SILVER, 1000, 3);
-	User u2 = new User(SILVER, 1000, 5);
-	User u3 = new User(SILVER, 500, 1);
-	User u4 = new User(SILVER, 1000, 1);
-	User u5 = new User(SILVER, 1500, 1);
-	User u6 = new User(SILVER, 1500, 5);
-	User u7 = new User(SILVER, 500, 0);
-	User u8 = new User(SILVER, 1000, 0);
-	User u9 = new User(SILVER, 1500, 0);
+	User u = new User(sv, 1000, 1);
+	User u1 = new User(sv, 1000, 3);
+	User u2 = new User(sv, 1000, 5);
+	User u3 = new User(sv, 500, 1);
+	User u4 = new User(sv, 1000, 1);
+	User u5 = new User(sv, 1500, 1);
+	User u6 = new User(sv, 1500, 5);
+	User u7 = new User(sv, 500, 0);
+	User u8 = new User(sv, 1000, 0);
+	User u9 = new User(sv, 1500, 0);
 
-	// GOLD START
-	User u10 = new User(GOLD, 1000, 1);
-	User u11 = new User(GOLD, 1000, 3);
-	User u12 = new User(GOLD, 1000, 5);
-	User u13 = new User(GOLD, 500, 1);
-	User u14 = new User(GOLD, 1000, 1);
-	User u15 = new User(GOLD, 1500, 1);
-	User u16 = new User(GOLD, 1500, 5);
-	User u17 = new User(GOLD, 500, 0);
-	User u18 = new User(GOLD, 1000, 0);
-	User u19 = new User(GOLD, 1500, 0);
+	// gd START
+	User u10 = new User(gd, 1000, 1);
+	User u11 = new User(gd, 1000, 3);
+	User u12 = new User(gd, 1000, 5);
+	User u13 = new User(gd, 500, 1);
+	User u14 = new User(gd, 1000, 1);
+	User u15 = new User(gd, 1500, 1);
+	User u16 = new User(gd, 1500, 5);
+	User u17 = new User(gd, 500, 0);
+	User u18 = new User(gd, 1000, 0);
+	User u19 = new User(gd, 1500, 0);
 
 	@Test
 	public void getUserTotalChargeTestLine1() {
@@ -90,65 +90,72 @@ public class AppTest {
 		assertEquals(548.45, total, 1);
 	}
 
-	// GOLD START
+	// gd START
 
 	@Test
-	public void getUserTotalChargeTestLine1Gold() {
+	public void getUserTotalChargeTestLine1gd() {
 		float total = u10.getUserTotalCharge();
 		assertEquals(49.95, total, 1);
 	}
 
 	@Test
-	public void getUserTotalChargeTestLine3Gold() {
+	public void getUserTotalChargeTestLine3gd() {
 		float total = u11.getUserTotalCharge();
 		assertEquals(78.94, total, 1);
 	}
 
 	@Test
-	public void getUserTotalChargeTestLine5Gold() {
+	public void getUserTotalChargeTestLine5gd() {
 		float total = u12.getUserTotalCharge();
 		assertEquals(83.94, total, 1);
 	}
 
 	@Test
-	public void getUserTotalChargeTestTime500Gold() {
+	public void getUserTotalChargeTestTime500gd() {
 		float total = u13.getUserTotalCharge();
 		assertEquals(49.95, total, 1);
 	}
 
 	@Test
-	public void getUserTotalChargeTestTime1000Gold() {
+	public void getUserTotalChargeTestTime1000gd() {
 		float total = u14.getUserTotalCharge();
 		assertEquals(49.95, total, 1);
 	}
 
 	@Test
-	public void getUserTotalChargeTestTime1500Gold() {
+	public void getUserTotalChargeTestTime1500gd() {
 		float total = u15.getUserTotalCharge();
 		assertEquals(274.95, total, 1);
 	}
 
 	@Test
-	public void getUserTotalChargeTestDoubleOverGold() {
+	public void getUserTotalChargeTestDoubleOvergd() {
 		float total = u16.getUserTotalCharge();
 		assertEquals(308.95, total, 1);
 	}
 
 	@Test
-	public void getUserTotalChargeTestLine0Time500Gold() {
+	public void getUserTotalChargeTestLine0Time500gd() {
 		float total = u17.getUserTotalCharge();
 		assertEquals(35.45, total, 1);
 	}
 
 	@Test
-	public void getUserTotalChargeTestLine0TIme1000Gold() {
+	public void getUserTotalChargeTestLine0TIme1000gd() {
 		float total = u18.getUserTotalCharge();
 		assertEquals(35.45, total, 1);
 	}
 
 	@Test
-	public void getUserTotalChargeTestLine0Time1500Gold() {
+	public void getUserTotalChargeTestLine0Time1500gd() {
 		float total = u19.getUserTotalCharge();
 		assertEquals(260.45, total, 1);
 	}
+	@SuppressWarnings("static-access")
+	@Test
+	public void MainTestSilver(){
+		App appTest = new App(sv, 400, 4);
+		appTest.main(null);
+	}
+	
 }
