@@ -13,16 +13,16 @@ public class User implements Users{
       this.numberOfLine = aNumberOfLine;
       setCalculator();
    }
-
+   @Override
    public void setCalculator(){
       this.calculator = new Calculator(this.plan.toLowerCase(), this.numberOfLine, this.callTime);
       setUserTotalCharge();
    }
-   
+   @Override
    public float getUserTotalCharge() {
       return totalCharge;
    }
-
+   @Override
    public void setUserTotalCharge() {
       this.totalCharge = (float)calculator.totalCharge();
    }

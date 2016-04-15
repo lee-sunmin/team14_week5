@@ -20,11 +20,12 @@ public class Calculator implements Calculators{
       this.lineNumber = line;
       this.callTime = call;
    }
-   
+   @Override
    public double totalCharge(){
       return lineCharge() + overtimeCharge();
    }
    
+   @Override
    public double lineCharge(){
       int lineNum = lineNumber - 1;
       if(lineNum == 0)
@@ -35,6 +36,7 @@ public class Calculator implements Calculators{
          return fee + addLine*2 + addOverThree*(lineNum-3);
    }
    
+   @Override
    public double overtimeCharge(){
       int overtime = callTime-basicTime;
       if(overtime > 0)

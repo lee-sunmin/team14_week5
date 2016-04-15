@@ -12,6 +12,10 @@ class App
 	private static Logger log;
 
 	
+	private App(){
+		
+	}
+	
 	public static void main(String[] args) {
 		String plan;
 		int time;

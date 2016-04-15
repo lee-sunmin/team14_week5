@@ -4,35 +4,31 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-
-	User u = new User("SILVER", 1000, 1);
-	User u1 = new User("SILVER", 1000, 3);
-	User u2 = new User("SILVER", 1000, 5);
-	User u3 = new User("SILVER", 500, 1);
-	User u4 = new User("SILVER", 1000, 1);
-	User u5 = new User("SILVER", 1500, 1);
-	User u6 = new User("SILVER", 1500, 5);
-	User u7 = new User("SILVER", 500, 0);
-	User u8 = new User("SILVER", 1000, 0);
-	User u9 = new User("SILVER", 1500, 0);
+	private final String SILVER = "Silver";
+	private final String GOLD = "Gold";
+	
+	User u = new User(SILVER, 1000, 1);
+	User u1 = new User(SILVER, 1000, 3);
+	User u2 = new User(SILVER, 1000, 5);
+	User u3 = new User(SILVER, 500, 1);
+	User u4 = new User(SILVER, 1000, 1);
+	User u5 = new User(SILVER, 1500, 1);
+	User u6 = new User(SILVER, 1500, 5);
+	User u7 = new User(SILVER, 500, 0);
+	User u8 = new User(SILVER, 1000, 0);
+	User u9 = new User(SILVER, 1500, 0);
 
 	// GOLD START
-	User u10 = new User("GOLD", 1000, 1);
-	User u11 = new User("GOLD", 1000, 3);
-	User u12 = new User("GOLD", 1000, 5);
-	User u13 = new User("GOLD", 500, 1);
-	User u14 = new User("GOLD", 1000, 1);
-	User u15 = new User("GOLD", 1500, 1);
-	User u16 = new User("GOLD", 1500, 5);
-	User u17 = new User("GOLD", 500, 0);
-	User u18 = new User("GOLD", 1000, 0);
-	User u19 = new User("GOLD", 1500, 0);
-
-	@Test
-	public void setCalculatorTest() {
-		Calculator c = new Calculator("SILVER", 0, 1000);
-		u.setCalculator();
-	}
+	User u10 = new User(GOLD, 1000, 1);
+	User u11 = new User(GOLD, 1000, 3);
+	User u12 = new User(GOLD, 1000, 5);
+	User u13 = new User(GOLD, 500, 1);
+	User u14 = new User(GOLD, 1000, 1);
+	User u15 = new User(GOLD, 1500, 1);
+	User u16 = new User(GOLD, 1500, 5);
+	User u17 = new User(GOLD, 500, 0);
+	User u18 = new User(GOLD, 1000, 0);
+	User u19 = new User(GOLD, 1500, 0);
 
 	@Test
 	public void getUserTotalChargeTestLine1() {
